@@ -1,0 +1,41 @@
+{%extends 'base.html'%}
+{%load crispy_forms_tags %}
+{%load static%}
+{%block content%}
+<div class="row"> 
+    <div class="col"> 
+        <div class="card" style="margin-top: 1%; ">
+            <form action="" method="POST" enctype="multipart/form-data">
+                <div style="margin: 5%;">
+                    {%csrf_token%}
+                    {{form|crispy}}
+                    <div style="background-color: rgb(240, 169, 183); padding: 2%; margin-bottom: 1rem;">
+                        <p style="border: 3px;">I hereby acknowledge that I have read, understood, and agree to abide by the terms and conditions outlined in this document. 
+                            I confirm that all information provided by me in the accompanying this form is true, accurate, and complete to the best of my knowledge.
+                            By submitting this form, I consent to be bound by the terms herein."</p>
+                            <p style="align-self: center;">
+                            <input class="" type="radio" id="radio1" name="radio1">
+                            <label class="" for="radio1">I Agree</label>
+                            </p>
+                             <p>
+                                <input class="" type="radio" id="radio2" name="radio1">
+                                <label class="" for="radio2">I don't Agree</label>
+                             </p> 
+                    </div>
+                    
+                        
+                        
+                    <button type="submit" class="btn btn-primary" style="margin-left: 30%;width: 40%;">Submit</button>
+                </div>
+            </form>
+        </div> 
+    </div> 
+</div> 
+{%endblock%}
+
+
+
+
+
+
+   

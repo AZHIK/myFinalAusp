@@ -1,0 +1,103 @@
+{%extends 'base.html'%}
+{%load crispy_forms_tags %}
+{%load static%}
+{%block content%}
+{% if messages %}
+        <div class="alert alert-danger" style="margin-top: 1rem;width: 50%;">
+            {% for message in messages %}
+                <h6>{{ message }}</h6>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+<div class="row" style="margin-bottom: 2rem;margin-top: 2rem; background-color:rgb(221, 237, 237) ;">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="{%static 'images/slide1.jpg'%}" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-md-6" class="mydiv" style="margin-bottom: 1rem;">
+                <button class="btn btn-light" style="width: 60%; margin-top: 7rem; margin-left: 20%;"><strong>visit Our website</strong></button>
+                <button class="btn btn-light" style="width: 60%;margin-top: 1rem;margin-left: 20%"><strong>Scholarships</strong></button>
+                <button class="btn btn-light" style="width: 60%;margin-top: 1rem;margin-left: 20%"><strong>E-learning</strong></button>
+            </div>
+          </div> 
+        </div>
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="{%static 'images/slide2.jpg'%}" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-md-6" class="mydiv" style="margin-bottom: 1rem;">
+                <button class="btn btn-light" style="width: 60%; margin-top: 7rem; margin-left: 20%;"><strong>visit Our website</strong></button>
+                <button class="btn btn-light" style="width: 60%;margin-top: 1rem;margin-left: 20%"><strong>Scholarships</strong></button>
+                <button class="btn btn-light" style="width: 60%;margin-top: 1rem; margin-left: 20%;"><strong>E-learning</strong></button>
+            </div> 
+          </div>      
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="{%static 'images/slide3.jpg'%}" class="d-block w-100" alt="...">
+            </div>
+            <div class="col-md-6" class="mydiv" style="margin-bottom: 1rem;">
+                <button class="btn btn-light" style="width: 60%; margin-top: 7rem; margin-left: 20%;"><strong>visit Our website</strong></button>
+                <button class="btn btn-light" style="width: 60%;margin-top: 1rem;margin-left: 20%"><strong>Scholarships</strong></button>
+                <button class="btn btn-light" style="width: 60%;margin-top: 1rem;margin-left: 20%"><strong>E-learning</strong></button>
+            </div>
+          </div>   
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+
+  <div class="row" style="margin-bottom: 3rem;">
+    <div class="col-md-4" style="margin-bottom: 1rem;">
+        <div class="card">
+            <div class="card-header">
+                <h2 style="text-align: center;">Announcements</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maxime similique sit impedit magnam cupiditate, atque minus libero, maiores exercitationem, corporis modi nam necessitatibus ipsam ad omnis non. Nemo, rerum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" style="margin-bottom: 1rem;">
+        <div class="card">
+            <div class="card-header">
+                <h2 style="text-align: center;">Upcoming Events</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maxime similique sit impedit magnam cupiditate, atque minus libero, maiores exercitationem, corporis modi nam necessitatibus ipsam ad omnis non. Nemo, rerum.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" style="margin-bottom: 1rem;">
+        <div class="card">
+            <div class="card-header">
+                <h2 style="text-align: center;">Notifications</h2>
+            </div>
+            <div class="card-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maxime similique sit impedit magnam cupiditate, atque minus libero, maiores exercitationem, corporis modi nam necessitatibus ipsam ad omnis non. Nemo, rerum.</p>
+            </div>
+        </div>
+    </div>
+  </div>
+{%endblock%}

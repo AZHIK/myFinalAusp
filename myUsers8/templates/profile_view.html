@@ -1,0 +1,82 @@
+{%extends 'base.html'%}
+{%load crispy_forms_tags %}
+{%load static%}
+{%block content%}
+<div class="row" style="justify-content: center;"> 
+    <h1 style="text-align: center; margin-bottom: 2rem;">YOUR PROFILE</h1>
+    {% if profile %}
+    <table class="table table-striped" style="margin-left: 2rem;">    
+        <tbody>
+            <tr>
+                <th scope="row">Profile photo</th>
+                {% if profile.profile_image%}
+                <td><img src="{{ profile.profile_image.url}}" alt="" style="width: 7rem%; height: 7rem;"></td>
+                {% endif %}
+              </tr>
+          <tr>
+            <th scope="row">Username</th>
+            <td>{{ profile.user.username }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Identification Number</th>
+            <td>{{ profile.identification_number }}</td>
+          </tr>
+          <tr>
+            <th scope="row">Email</th>
+            <td>{{ profile.user.email }}</td>
+          </tr>
+          <tr>
+            <th scope="row">category of membership</th>
+            <td>{{ profile.category_of_membership }}</td>
+          </tr>
+          <tr>
+            <th scope="row">firstname</th>
+            <td>{{ profile.firstname}}</td>
+          </tr> 
+          <tr>
+            <th scope="row">lastname</th>
+            <td>{{ profile.last_name }}</td>
+          </tr> 
+          <tr>
+            <th scope="row">nationality</th>
+            <td>{{ profile.nationality}}</td>
+          </tr>
+          <tr>
+            <th scope="row">Current residential country</th>
+            <td>{{ profile.current_residential_country }}</td>
+          </tr> 
+          <tr>
+            <th scope="row">Name of institute</th>
+            <td>{{ profile.name_of_institute }}</td>
+          </tr> 
+          <tr>
+            <th scope="row">program</th>
+            <td>{{ profile.program }}</td>
+          </tr> 
+          <tr>
+            <th scope="row">Duration of Studies</th>
+            <td>{{ profile.duration_of_studies }} years</td>
+          </tr> 
+          <tr>
+            <th scope="row">Year</th>
+            <td>{{ profile.year }}</td>
+          </tr>        
+        </tbody>
+    </table>
+        {% if request.user.is_authenticated %}
+        <div class="row">
+            <div class="col-md-6">
+                <a href="{% url 'edit_profile' %}"><button class="btn btn-primary" style="width: 40%; margin-left: 30%; margin-bottom: 1rem;">Edit Profile</button></a>
+            </div>
+            <div class="col-md-6">
+                <a href="{% url 'logout' %}"><button class="btn btn-secondary" style="width: 40%; margin-left: 30%;margin-bottom: 1rem;">logout</button></a>   
+            </div>
+        </div>
+        {% endif %}
+    {% else %}
+        <p>You are not logged in or don't have a profile yet.</p>
+    {% endif %}
+    </div> 
+</div> 
+{%endblock%}
+
