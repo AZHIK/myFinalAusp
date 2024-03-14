@@ -84,9 +84,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'jAEKfOWKOIusRbiCVJZjXZQnthAxXriT',
-        'HOST': 'monorail.proxy.rlwy.net',  
-        'PORT': '33934', 
+        'PASSWORD': 'EPawxLyzotjLRpQLslYyWRgtMTutmchz',
+        'HOST': 'roundhouse.proxy.rlwy.net',  
+        'PORT': '36663', 
     }
 }
 
@@ -147,5 +147,5 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 AUTH_USER_MODEL = 'myUsers8.CustomUser'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://myfinalausp-production.up.railway.app'
+    'https://web-production-c48f.up.railway.app'
 ]
