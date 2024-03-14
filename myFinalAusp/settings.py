@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'myFinalAusp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'myPgUsers',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'admin@1234',
-        'HOST': 'localhost',  
-        'PORT': '5432', 
+        'PASSWORD': 'jAEKfOWKOIusRbiCVJZjXZQnthAxXriT',
+        'HOST': 'monorail.proxy.rlwy.net',  
+        'PORT': '33934', 
     }
 }
 
