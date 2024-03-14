@@ -145,3 +145,7 @@ STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesSto
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 AUTH_USER_MODEL = 'myUsers8.CustomUser'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://myfinalausp-production.up.railway.app/'
+]
