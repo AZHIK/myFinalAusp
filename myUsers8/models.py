@@ -23,7 +23,7 @@ class CustomUser(AbstractUser):
         return self.username
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     category_of_membership = models.CharField(
         choices=membership_category, max_length=30, default="Ordinary"
     )
